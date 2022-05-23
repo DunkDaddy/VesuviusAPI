@@ -1,0 +1,21 @@
+Start with installing python 3.9 or newer from https://www.python.org/.
+once you have opened the python installer look at the buttom of the installation window and click the add to path option.
+when python has been installed (you might need to restart) open up your terminal.
+then do pip install django
+Pip install djangorestframework
+pip install mysqlclient
+
+start out with going into a terminal and navigate to VesuviusAPI.
+In VesuviusAPI navigate still in the terminal to apiVesuvius.
+Now open Xammp and create a database with the name vesuvius_rest_api.
+then stil in terminal that should look like this \GitHub\VesuviusAPI\apiVesuvius> run the following command: python manage.py makemigrations
+afterwards run the command: python manage.py migrate.
+the next command afterwards should be: python manage.py createsuperuser.
+fill out the information and remember it.
+then do: python manage.py runserver.
+you now have a running api.
+To stop the api you can go to the terminal it is in and press ctrl + c
+
+you can find all paths to use in the folder 'api' and the urls file.
+the paths you are gonna be using will look something along the lines of http://127.0.0.1:8000/location-list/
+if you want to input data in a easy way you can go to http://127.0.0.1:8000/admin and enter the information of the superuser you created earlier.
