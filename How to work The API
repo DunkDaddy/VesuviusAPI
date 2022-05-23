@@ -1,4 +1,5 @@
 Start with installing python 3.9 or newer from https://www.python.org/.
+once you have opened the python installer look at the buttom of the installation window and click the add to path option.
 when python has been installed (you might need to restart) open up your terminal.
 then do pip install django
 Pip install djangorestframework
