@@ -100,7 +100,7 @@ def updateLocation(request, pk):
 
 @api_view(['GET'])
 def deleteLocation(request, pk):
-    location = Customers.objects.get(id=pk)
+    location = Location.objects.get(id=pk)
     location.delete()
 
     return Response('Location Deleted Successfully')
