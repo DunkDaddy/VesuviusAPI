@@ -16,6 +16,6 @@ then do: python manage.py runserver.
 you now have a running api.
 To stop the api you can go to the terminal it is in and press ctrl + c
 
-you can find all paths to use in the api folder urls file.
+you can find all paths to use in the folder 'api' and the urls file.
 the paths you are gonna be using will look something along the lines of http://127.0.0.1:8000/location-list/
 if you want to input data in a easy way you can go to http://127.0.0.1:8000/admin and enter the information of the superuser you created earlier.
