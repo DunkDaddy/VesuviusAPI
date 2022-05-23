@@ -63,10 +63,15 @@ class Itemassembly(models.Model):
     ingredientsId = models.ForeignKey(Ingredients, on_delete=models.CASCADE)
 
 
-class OrderItems(models.Model):
-    menuItemsId = models.ForeignKey(MenuItems, on_delete=models.CASCADE)
-
-
 class Order(models.Model):
     tableId = models.ForeignKey(Tables, on_delete=models.CASCADE)
-    orderItemsId = models.ForeignKey(OrderItems, on_delete=models.CASCADE)
+
+
+class OrderItems(models.Model):
+    menuItemsId = models.ForeignKey(MenuItems, on_delete=models.CASCADE)
+    orderId = models.ForeignKey(Order, on_delete=models.CASCADE)
+
+
+class Table_list(models.Model):
+    tableId = models.ForeignKey(Tables, on_delete=models.CASCADE)
+    reservationId = models.ForeignKey(Reservation, on_delete=models.CASCADE)

@@ -13,4 +13,5 @@ admin.site.register(MenuItems)
 admin.site.register(Itemassembly)
 admin.site.register(OrderItems)
 admin.site.register(Order)
+admin.site.register(Table_list)
 
