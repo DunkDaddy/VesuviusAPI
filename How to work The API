@@ -1,4 +1,5 @@
-Start with installing python 3.9 or newer.
+Start with installing python 3.9 or newer from https://www.python.org/.
+when python has been installed (you might need to restart) open up your terminal.
 then do pip install django
 Pip install djangorestframework
 pip install mysqlclient
