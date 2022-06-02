@@ -451,3 +451,43 @@ def deleteOrder(request, pk):
     order.delete()
 
     return Response('Order Deleted Successfully')
+
+
+@api_view(['GET'])
+def showAllEmployee(request):
+    employee = Employee.objects.all()
+    serializer = EmployeeSerializer(employee, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def viewEmployee(request, pk):
+    employee = Employee.objects.get(id=pk)
+    serializer = EmployeeSerializer(employee, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def createEmployee(request):
+    serializer = EmployeeSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def updateEmployee(request, pk):
+    employee = Employee.objects.get(id=pk)
+    serializer = EmployeeSerializer(instance=employee, data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def deleteEmployee(request, pk):
+    employee = Employee.objects.get(id=pk)
+    employee.delete()
+
+    return Response('Order Deleted Successfully')

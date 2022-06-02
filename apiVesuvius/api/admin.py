@@ -14,4 +14,10 @@ admin.site.register(Itemassembly)
 admin.site.register(OrderItems)
 admin.site.register(Order)
 admin.site.register(Table_list)
+admin.site.register(Rank)
+admin.site.register(Employee)
+admin.site.register(Status
+
+
+                    )
 

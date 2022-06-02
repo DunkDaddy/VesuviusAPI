@@ -21,6 +21,7 @@ class Location(models.Model):
 class Tables(models.Model):
     size = models.IntegerField()
     locationId = models.ForeignKey(Location, on_delete=models.CASCADE)
+    avalability = models.BooleanField()
 
 
 class Reservation(models.Model):
@@ -63,8 +64,13 @@ class Itemassembly(models.Model):
     ingredientsId = models.ForeignKey(Ingredients, on_delete=models.CASCADE)
 
 
+class Status(models.Model):
+    statusName = models.CharField(max_length=200, null=False, blank=False)
+
+
 class Order(models.Model):
     tableId = models.ForeignKey(Tables, on_delete=models.CASCADE)
+    statusId = models.ForeignKey(Status, on_delete=models.CASCADE)
 
 
 class OrderItems(models.Model):
@@ -75,3 +81,18 @@ class OrderItems(models.Model):
 class Table_list(models.Model):
     tableId = models.ForeignKey(Tables, on_delete=models.CASCADE)
     reservationId = models.ForeignKey(Reservation, on_delete=models.CASCADE)
+
+
+class Rank(models.Model):
+    name = models.CharField(max_length=200, null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+class Employee(models.Model):
+    name = models.CharField(max_length=200, null=False, blank=False)
+    rankId = models.ForeignKey(Rank, on_delete=models.CASCADE)
+    password = models.CharField(max_length=200, null=False, blank=False)
+
+    def __str__(self):
+        return self.name

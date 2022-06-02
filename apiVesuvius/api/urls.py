@@ -64,4 +64,10 @@ urlpatterns = [
     path('itemassembly-delete/<int:pk>/', views.deleteItemassembly, name='itemassembly-delete'),
     path('orderitems-delete/<int:pk>/', views.deleteOrderItems, name='orderitems-delete'),
     path('order-delete/<int:pk>/', views.deleteOrder, name='order-delete'),
+
+    path('employeegoodluckguessingthis9-list9/', views.showAllEmployee, name='employee-list'),
+    path('employeegoodluckguessingthis9-detail9/<int:pk>/', views.viewEmployee, name='employee-detail'),
+    path('employeegoodluckguessingthis9-create9/', views.createEmployee, name='employee-create'),
+    path('employeegoodluckguessingthis9-update9/<int:pk>/', views.updateReservation, name='employee-update'),
+    path('employeegoodluckguessingthis9-delete9/<int:pk>/', views.deleteEmployee, name='employee-delete'),
 ]
